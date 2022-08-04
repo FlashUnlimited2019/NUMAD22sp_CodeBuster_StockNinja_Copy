@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionHistoryActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/com_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/amiko_bold"
+        android:gravity="start"
+        android:text="GOOG"
+        android:textColor="#FFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/s_price"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/com_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiko_bold"
+        android:gravity="start"
+        android:text="(Alphabet Inc.)"
+        android:textColor="#FFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/s_price"
+        app:layout_constraintLeft_toRightOf="@id/com_symbol"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/s_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/amiko"
+        android:text="Price $0.00"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/s_value"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/com_symbol" />
+
+    <TextView
+        android:id="@+id/s_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/amiko"
+        android:text="Value: $0.00"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/s_quality"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s_price" />
+
+    <TextView
+        android:id="@+id/s_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/amiko"
+        android:text="QTY: 0"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/s_gain_loss"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s_value" />
+
+    <TextView
+        android:id="@+id/s_gain_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/amiko"
+        android:text="Gain/Loss: $0.00"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/transaction_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s_quality" />
+
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="300dp"
+        android:text="BUY"
+        android:fontFamily="@font/amiko"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/com_symbol"
+        app:layout_constraintBottom_toTopOf="@id/button_sell"/>
+
+    <Button
+        android:id="@+id/button_sell"
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="300dp"
+        android:text="SELL"
+        android:fontFamily="@font/amiko"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button_buy"
+        app:layout_constraintTop_toBottomOf="@id/button_buy"
+        app:layout_constraintBottom_toTopOf="@id/transaction_date"/>
+
+    <TextView
+        android:id="@+id/transaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/amiko"
+        android:text="Date"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/transaction_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s_gain_loss" />
+
+    <TextView
+        android:id="@+id/transaction_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="Action"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/transaction_list"
+        app:layout_constraintLeft_toRightOf="@id/transaction_date"
+        app:layout_constraintRight_toLeftOf="@id/transaction_price"
+        app:layout_constraintTop_toBottomOf="@id/s_gain_loss" />
+
+    <TextView
+        android:id="@+id/transaction_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="Price"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/transaction_list"
+        app:layout_constraintLeft_toRightOf="@id/transaction_action"
+        app:layout_constraintRight_toLeftOf="@id/transaction_quality"
+        app:layout_constraintTop_toBottomOf="@id/s_gain_loss" />
+
+    <TextView
+        android:id="@+id/transaction_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="QTY"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/transaction_list"
+        app:layout_constraintLeft_toRightOf="@id/transaction_price"
+        app:layout_constraintRight_toLeftOf="@id/transaction_value"
+        app:layout_constraintTop_toBottomOf="@id/s_gain_loss" />
+
+    <TextView
+        android:id="@+id/transaction_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/amiko"
+        android:text="Value"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/transaction_list"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/s_gain_loss" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transaction_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!--        android:layoutAnimation="@anim/layout_leftslide"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "14601079181",
+    "project_id": "test5520-final",
+    "storage_bucket": "test5520-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14601079181:android:fbdf7f0ec7eecaa4ad95c4",
+        "android_client_info": {
+          "package_name": "edu.neu.madcourse.numad22sp_codebuster_stockninja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14601079181-kj4vmtjcaf6isb940s5re8itth7ug10q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgN2isRK8Yl10Oo6i-sLWtIKGPfsnQzCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14601079181-kj4vmtjcaf6isb940s5re8itth7ug10q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
